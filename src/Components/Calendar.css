@@ -1,0 +1,18 @@
+.calendar {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 10px;
+}

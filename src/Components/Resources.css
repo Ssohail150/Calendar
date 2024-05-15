@@ -1,0 +1,13 @@
+.resource {
+  margin-bottom: 20px;
+}
+
+.resource h3 {
+  margin-bottom: 10px;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
