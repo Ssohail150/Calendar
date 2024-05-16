@@ -1,0 +1,18 @@
+.event {
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  cursor: grab;
+  position: relative;
+  background-color: #ececec;
+}
+
+.event button {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}

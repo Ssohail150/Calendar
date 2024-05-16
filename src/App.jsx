@@ -1,11 +1,12 @@
-import React from 'react';
-import Calendar from './Components/Calendar';
-import './App.css';
+// src/App.jsx
+import React from "react";
+import MonthlyCalendar from "./Components/MonthlyCalendar";
+import "./styles/App.css";
 
 const App = () => {
   return (
     <div className="app">
-      <Calendar />
+      <MonthlyCalendar />
     </div>
   );
 };

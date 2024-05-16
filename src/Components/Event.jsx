@@ -1,17 +1,22 @@
-import React from 'react';
-import './Event.css';
+import React from "react";
+import "../styles/Event.css";
 
-const Event = ({ event, deleteEvent }) => {
-  const handleDelete = () => {
-    if (window.confirm('Are you sure you want to delete this event?')) {
-      deleteEvent(event.id);
-    }
+const Event = ({ event, onDelete, onDragStart, onDragEnd }) => {
+  const handleDragStart = (e) => {
+    e.dataTransfer.setData("event-id", event.id);
+    onDragStart(event);
   };
 
   return (
-    <div className="event" style={{ backgroundColor: `#${Math.floor(Math.random() * 16777215).toString(16)}` }}>
-      <span>{event.title}</span>
-      <button onClick={handleDelete}>x</button>
+    <div
+      className="event"
+      style={{ backgroundColor: event.color }}
+      draggable
+      onDragStart={handleDragStart}
+      onDragEnd={onDragEnd}
+    >
+      <p>{event.title}</p>
+      <button onClick={() => onDelete(event.id)}>Delete</button>
     </div>
   );
 };
